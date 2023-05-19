@@ -335,7 +335,7 @@ void setup()
   config.apid = "Device-" + String((uint32_t)ESP.getEfuseMac(), HEX);
   config.psk = password;
   config.menuItems = AC_MENUITEM_CONFIGNEW | AC_MENUITEM_OPENSSIDS | AC_MENUITEM_RESET;
-  config.title = "FOSSA";
+  config.title = "LATES";
   config.reconnectInterval = 1;
 
   if (triggerAp == true)
@@ -392,19 +392,20 @@ void logo()
   tft.setTextColor(TFT_YELLOW);
   tft.println("LATES");
   tft.setTextColor(TFT_WHITE);
-  tft.setCursor(40, 170);
+  tft.setCursor(120, 170);
   tft.setTextSize(3);
-  tft.println("Lightning ATM Thai Experiment Sandbox");
+  tft.println("Lightning ATM");
+  tft.setCursor(105, 200);
+  tft.println("Thai Experiment");
 }
 
 void feedmefiat()
 {
+  lates();
   tft.setTextColor(TFT_WHITE);
-  tft.setCursor(60, 40);
-  tft.setTextSize(3);
-  tft.println("Project LATES");
+  tft.setTextSize(2);
   tft.setCursor(10, 280);
-  tft.println("(feed me fiat. " + String(charge) + "% charge)");
+  tft.println("==[ Limited to 2100 THB per redeem ]==");
   
 }
 
@@ -608,3 +609,54 @@ int xor_encrypt(uint8_t *output, size_t outlen, uint8_t *key, size_t keylen, uin
   // return number of bytes written to the output
   return cur;
 }
+
+void lates(){
+  tft.setTextColor(TFT_YELLOW);
+  tft.setTextSize(1);
+  tft.setCursor(0,50);
+  tft.println("                                    .:.                                                             ");
+  tft.println("                              .:^~!!~.                                                              ");
+  tft.println("                           .^~!!!!!!!~                                                              ");
+  tft.println("       ..:::...       .:^~!!!!!!!!!!!!^                                                             ");
+  tft.println("     ^~!!!!!!!!!~~~~~^^^^^^~!!!!!!!!!!!:                                       ^!.                  ");
+  tft.println("     ^!!!!!!!!!!!!!:..: ~.   :~!!!!!!!!!.                                     ~!!^                  ");
+  tft.println("      :!!!!!!!!!!^ .:^!~!!!!:  :!!!!!!!!~                                    ^!!!~                  ");
+  tft.println("       ^!!!!!!!!~   .^!! ^~!^   ^!!!!!!!!^                                  .!!:^!.                 ");
+  tft.println("        !!!!!!!!~     !^: .!!!. :!!!!!!!!!.                                 :7^ .!:                 ");
+  tft.println("        :!!!!!!!!.    ^!!^~!!^  ~!!!!!!~~!~                                 :7^  !^                 ");
+  tft.println("         ~!!!!!!!!:  .^^!^~^  .~!!!!~:.  ~!:                                 !~  :!.                ");
+  tft.println("         .!!!!!!!!!~^.. :..::~!!!~:.     :!~                                ::~~.:~!.               ");
+  tft.println("          .!!!~~~~~~!!!~~~~~~~^.          ~7^                         .:.:~~!!!!!!!!!:              ");
+  tft.println("           ..          ....               .!!.                     ..^!!!!!!!!!!!!!!!!~:            ");
+  tft.println("                                           ^7~                  .::!!!!!!!!!!!!!!!!!!!!!~.          ");
+  tft.println("                                           .!!:             ..^^^!!!!!!!!!!!!!!!!!!!!!!!!!.         ");
+  tft.println("                                            ^!!            .~!!!!!!!!!!!!!!!!!!!!!!~:^^::.^         ");
+  tft.println("                                             !!^         ^~!!!!!!!!!!!!!!!!!!!!!!!!!~:::: ~.        ");
+  tft.println("                    ...  ::...               :!!...::.:^~!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!~~!7^        ");
+  tft.println("               .:~~!!!!!!^ ...:::::.........::!!~.. :!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!~^.       ");
+  tft.println("             :~!!!!!!!!!!.         .^^^...    :!!.   ^!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!~^~~~:  ..      ");
+  tft.println("           :~!!!!!!!!!!~.      .^: :^!:.:::.   ~7~    ~!!!!!!!!!!!!!!!!!!!!!^.:~!!!^.:..     ..     ");
+  tft.println("          :!!!!!!!!!!!^        .~!~~~!..:.^!.  ^!~::  :!!!!!!!!!!!!!!!!!!~:     .^~. :.:.    ..:    ");
+  tft.println("          ~!!!!!!!!!!!          ^!:.!!    :!. :^. .^. .!!!!!!!!!!!!!!!!~:          .::::^:   ^:     ");
+  tft.println("         .!!!!!!!!!!!~        .:.:. :^    .^::..^!!:  .!!!!!!!!!!!!!!!:              .:..^^::.      ");
+  tft.println("         ^!!!!!!!!!!!!:       !~ ^!^^~~ :~^^~!   !!~  ^!!!!!!!!!!!!!~.                 ...          ");
+  tft.println("         ~!!!!!!!!!!!!!^.    .!^ .!!:^! ~!~^~!.  ^!!::!!!!!!!!!!!!!^                                ");
+  tft.println("         !~:!!!!!!!!!~^.:~^:..^^ .~: ~^ .!: .~. ..!7~:!!!!!!!!!!!!^                                 ");
+  tft.println("         ~~ ^!!!!!~:. .^!!!!!!!~~~^^^^^:^^::^~~!!~^^::!!!!!!!!!!!~                                  ");
+  tft.println("         ^~ .~~:...:^!!!!!!!!!!!!!!!!!!!!!: ~!!!!!:   ~!!!!!!!!!~                                   ");
+  tft.println("         :~ .^.:^~!!!!!!!!!!!!!!!!!!!!!!!!: ^!!!!!~   .!!!!!!!~:                                    ");
+  tft.println("         .~. .:!!!!!!!!!!!~~!!!!!!!!!!!!!7^ ^7!!!!!.   ^!!!!~                                       ");
+  tft.println("         .!~   !!!!!!!!!!~   ..:::^^^^^^^^^.^:... :^   ^!!!!~                                       ");
+  tft.println("         :!!:  ~!!!!!!!!~                          .:!!!!!!!^                                       ");
+  tft.println("          ^!  .!!!!!!!!~                             !!!!!!!:                                       ");
+  tft.println("           .  ^!!!!!!!^      .::         .^:         ~!!!!!!:   :::::::^..^::::::  .:^^::.          ");
+  tft.println("             .!!!!!!!~       ^7~        .!!!.        ~!!!!!!:  .^^^!!^^^..!!^^^^: :!!:::~^          ");
+  tft.println("              ~!!!!!!^       ^7~       .!!:!!.       ~!!!!!!:      !!.   .!!^::.  :!!^:.            ");
+  tft.println("              :!!!!!!!       ^7^       ~7~:~7~       ^!!!!!~       !!.   .!!^^^.    .^~~!^.         ");
+  tft.println("              :!!~:!!!:      ^7~....  ^7~:::~7^      ^!!!!!:       !!.   .!!:.... :^:...!7:         ");
+  tft.println("              :!!: ^!!^      ^~~~~~~..~~     ~~.     !!!!!!.       ~~.   .~~~~~~~ .^~~~~~:          ");
+  tft.println("              ~!!: :!!!.                            .!!!!!!:                                        ");
+  tft.println("              :!!!..~!!!:                            .!!!!!!^                                       ");
+  tft.println("              .!!!!. ~!!7!.                          :!!!!!!7~                                      ");
+  tft.println("               ::::. .::::.                           ....::::                                      ");
+  }
